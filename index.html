@@ -33,6 +33,7 @@ var config = {
 
 function preload ()
 {
+    console.log('Preloading assets...');
     this.load.image('Calling', 'assets 1.0/Calling.jpeg'); 
     this.load.image('Exist', 'assets 1.0/Exist.jpeg');
     this.load.image('Nostalgia', 'assets 1.0/Nostalgia core.jpeg');
@@ -42,6 +43,7 @@ function preload ()
 
 function create ()
 {
+    console.log('Creating scene...')
     var image = this.add.image(400, 300, 'Calling');
 
     const upKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP);
