@@ -21,7 +21,7 @@ var config = {
         default: 'arcade',
         arcade: {
             gravity: { y: 300 },
-            debug: false
+            debug: true
         }
     },
     scene: {
@@ -34,11 +34,11 @@ var config = {
 function preload ()
 {
     console.log('Preloading assets...');
-    this.load.image('Calling', 'assets/Calling.jpeg'); 
-    this.load.image('Exist', 'assets/Exist.jpeg');
-    this.load.image('Nostalgia', 'assets/Nostalgia core.jpeg');
-    this.load.image('Poetry', 'assets/Poetry.jpeg');
-    this.load.image('Wizard', 'assets/Wizard.jpeg');
+    this.load.image('Calling', 'assets/Calling.png'); 
+    this.load.image('Exist', 'assets/Exist.png');
+    this.load.image('Nostalgia', 'assets/Nostalgia core.png');
+    this.load.image('Poetry', 'assets/Poetry.png');
+    this.load.image('Wizard', 'assets/Wizard.png');
 }
 
 function create ()
@@ -80,7 +80,6 @@ function update ()
 }
 </script>
     
-
     
 </body>
 </html>
