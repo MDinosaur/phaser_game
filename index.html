@@ -24,7 +24,11 @@ var config = {
     }
 };
 
-
+class Calling extends Phaser.scene {
+  constructor() {
+    super({ key: 'Calling' });
+  }
+    
 function preload ()
 {
     console.log('Preloading assets...');
@@ -38,7 +42,7 @@ function preload ()
 function create ()
 {
     console.log('Creating scene...')
-    var image = this.add.image(400, 300, 'Calling');
+    var image = this.add.image(400, 450, 'Calling');
 
     const upKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP);
     const downKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN);
@@ -65,7 +69,13 @@ function create ()
     spaceKey.on('space', () => {
         image.setTexture('Calling')
     });
+
+    this.add.text(Calling, 0,0, 'Press up key to see a cool wizard' { font: 'American Typewriter' });
+    this.add.text(Calling, 0,1, 'Press down key to see poetry' { font: 'American Typewriter' });
+    this.add.text(Calling, 0,2, 'Press left key to see a cool photo' { font: 'American Typewriter' });
+    this.add.text(Calling, 0,0, 'Press right key to see a note' { font: 'American Typewriter' });
     
+    }
 }
 
 function update ()
