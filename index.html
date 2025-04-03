@@ -33,9 +33,6 @@ var config = {
     this.load.image('Poetry', 'Poetry.png');
     this.load.image('Wizard', 'Wizard.png');
 }
-class Calling extends Phaser.scene {
-   constructor() {
-     super({ key: 'Calling' });
     
     function create () {
     console.log('Creating scene...')
@@ -64,7 +61,7 @@ class Calling extends Phaser.scene {
     });
 
     enterKey.on('enter', () => {
-        image.setTexture('Calling')
+        this.scene.add('Calling', calling, true)
     });
 
     this.add.text(100,0, 'Press up key to see a cool wizard', { font: 'American Typewriter' });
@@ -73,11 +70,23 @@ class Calling extends Phaser.scene {
     this.add.text(0,60, 'Press right key to see a note', { font: 'American Typewriter' });
 }    
 
-    
+    class Calling extends Phaser.scene {
+   constructor() {
+     super({ key: 'Calling' });
+       
+        function create () {
+    this.add.image(400,300, 'Calling)
+    this.add.text(100,0, 'Press up key to see a cool wizard', { font: 'American Typewriter' });
+    this.add.text(0,20, 'Press down key to see poetry', { font: 'American Typewriter' });
+    this.add.text(0,40, 'Press left key to see a cool photo', { font: 'American Typewriter' });
+    this.add.text(0,60, 'Press right key to see a note', { font: 'American Typewriter' });
+        
+    }
+   
     class Wizard extends Phaser.scene {
    constructor() {
      super({ key: 'Wizard' });
-
+    
         function create () {
 
             this.add.image(400,300, 'Wizard')
