@@ -24,6 +24,11 @@ var config = {
     }
 };
     const game = new Phaser.Game (config);
+
+    class Calling extends Phaser.scene {
+   constructor() {
+     super({ key: 'Calling' });
+   }
     
     function preload () {
     console.log('Preloading assets...');
@@ -42,10 +47,10 @@ var config = {
     const downKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN);
     const leftKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
     const rightKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
-    const spaceKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+    const enterKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER);
 
     upKey.on('up', () => {
-        image.setTexture('Wizard'); 
+        this.scene.add('Wizard', wizard, true);
     });
 
     downKey.on('down', () => {
@@ -60,16 +65,35 @@ var config = {
         image.setTexture('Exist'); 
     });
 
-    spaceKey.on('space', () => {
+    enterKey.on('enter', () => {
         image.setTexture('Calling')
     });
 
-    this.add.text(0,0, 'Press up key to see a cool wizard', { font: 'American Typewriter' });
+    this.add.text(100,0, 'Press up key to see a cool wizard', { font: 'American Typewriter' });
     this.add.text(0,20, 'Press down key to see poetry', { font: 'American Typewriter' });
     this.add.text(0,40, 'Press left key to see a cool photo', { font: 'American Typewriter' });
     this.add.text(0,60, 'Press right key to see a note', { font: 'American Typewriter' });
 }    
 
+    
+    class Wizard extends Phaser.scene {
+   constructor() {
+     super({ key: 'Wizard' });
+   } 
+
+        function create () {
+
+            this.add.image(400,300, 'Wizard')
+            this.add.text(100,0, 'Press enter to go back to the beginning', {font: 'American Typewriter'});
+
+         enterKey.on('enter', () => {
+             this.add.scene('Calling', calling, false)
+        }
+
+        
+
+        
+        
 function update ()
 {
 
