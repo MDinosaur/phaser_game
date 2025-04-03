@@ -67,18 +67,18 @@ var config = {
     this.add.text(0,60, 'Press right key to see a note', { font: 'American Typewriter' });
 }    
 
-    class Calling extends Phaser.Scene {
+class Calling extends Phaser.Scene {
    constructor() {
-     super({ key: 'Calling' });
+      super({ key: 'Calling' });
    }
-create () {
-    this.add.image(400,300, 'Calling');
-    this.add.text(100,0, 'Press up key to see a cool wizard', { font: 'American Typewriter' });
-    this.add.text(0,20, 'Press down key to see poetry', { font: 'American Typewriter' });
-    this.add.text(0,40, 'Press left key to see a cool photo', { font: 'American Typewriter' });
-    this.add.text(0,60, 'Press right key to see a note', { font: 'American Typewriter' });
-        
-    }
+   create () {
+      this.add.image(400, 300, 'Calling');
+      this.add.text(100, 0, 'Press up key to see a cool wizard', { font: 'American Typewriter' });
+      this.add.text(0, 20, 'Press down key to see poetry', { font: 'American Typewriter' });
+      this.add.text(0, 40, 'Press left key to see a cool photo', { font: 'American Typewriter' });
+      this.add.text(0, 60, 'Press right key to see a note', { font: 'American Typewriter' });
+   }
+}
 }
    
     class Wizard extends Phaser.Scene {
