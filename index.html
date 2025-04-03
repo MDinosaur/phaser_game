@@ -24,23 +24,21 @@ var config = {
     }
 };
 
-class Calling extends Phaser.scene {
+class Calling extends Phaser.Scene {
   constructor() {
     super({ key: 'Calling' });
-  
+  }
     
-function preload ()
-{
+    function preload () {
     console.log('Preloading assets...');
     this.load.image('Calling', 'Calling.png'); 
     this.load.image('Exist', 'Exist.png');
     this.load.image('Nostalgia', 'Nostalgia core.png');
     this.load.image('Poetry', 'Poetry.png');
     this.load.image('Wizard', 'Wizard.png');
-}
+    }
 
-function create ()
-{
+    function create () {
     console.log('Creating scene...')
     var image = this.add.image(400, 450, 'Calling');
 
@@ -70,13 +68,12 @@ function create ()
         image.setTexture('Calling')
     });
 
-    this.add.text(Calling, 0,0, 'Press up key to see a cool wizard' { font: 'American Typewriter' });
-    this.add.text(Calling, 0,1, 'Press down key to see poetry' { font: 'American Typewriter' });
-    this.add.text(Calling, 0,2, 'Press left key to see a cool photo' { font: 'American Typewriter' });
-    this.add.text(Calling, 0,0, 'Press right key to see a note' { font: 'American Typewriter' });
-    
+    this.add.text(0,0, 'Press up key to see a cool wizard' { font: 'American Typewriter' });
+    this.add.text(0,1, 'Press down key to see poetry' { font: 'American Typewriter' });
+    this.add.text(0,2, 'Press left key to see a cool photo' { font: 'American Typewriter' });
+    this.add.text(0,3, 'Press right key to see a note' { font: 'American Typewriter' });
     }
-}
+}    
 
 function update ()
 {
