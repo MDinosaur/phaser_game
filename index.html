@@ -17,11 +17,8 @@ var config = {
     type: Phaser.AUTO,
     width: 800,
     height: 600,
-    scene: {
-        preload: preload,
-        create: create,
-        update: update
-    }
+    scene: [Calling, Wizard]
+
 };
     const game = new Phaser.Game (config);
     
@@ -94,7 +91,7 @@ create () {
             this.add.text(100,0, 'Press enter to go back to the beginning', {font: 'American Typewriter'});
 
          enterKey.on('enter', () => {
-             this.add.scene('Calling');
+             this.add.start('Calling');
         });
     }
 }
