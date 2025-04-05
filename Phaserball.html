@@ -1,0 +1,44 @@
+<html>
+<head>
+</head>
+<script>
+const config = {
+    type: Phaser.AUTO,
+    width: window.innerWidth - 50,
+    height: window.innerHeight - 50,
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 0 },
+            debug: false
+        }
+    },
+    scene: {
+        preload: preload,
+        create: create,
+        update: update
+    }
+};
+
+const game = new Phaser.Game(config);
+let ball;
+
+function preload() {
+    this.load.image('ball', 'https://weblink for ball'); // Replace with actual ball image
+}
+
+function create() {
+    ball = this.physics.add.image(this.sys.game.config.width / 2, this.sys.game.config.height - 30, 'ball');
+    ball.setCircle(20);
+    ball.setBounce(1);
+    ball.setVelocity(200, 150);
+    ball.setCollideWorldBounds(true);
+}
+
+function update() {
+    // The physics engine automatically handles the bouncing effect
+}
+</script>
+
+<body></body>
+</html>
