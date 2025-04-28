@@ -11,8 +11,8 @@ export default class MainMenu extends Phaser.Scene {
     }
 
     create() {
-        this.add.image(800, 400, 'TitleBG').setScale(0.7);
-        this.add.image(800, 69, 'DinoFishing').setScale(0.7);
+        this.add.image(800, 400, 'TitleBG').setScale(0.8);
+        this.add.image(800, 400, 'DinoFishing').setScale(0.7);
         
         const playButton = this.add.image(800, 600, 'Play').setScale(0.7).setInteractive();
 
