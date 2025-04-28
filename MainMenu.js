@@ -11,17 +11,17 @@ export default class MainMenu extends Phaser.Scene {
     }
 
     create() {
-        const TitleBG = this.add.image(800, 400, 'TitleBG').setScale(0.7);
+        const TitleBG = this.add.image(700, 400, 'TitleBG').setScale(0.7);
             console.log(`TitleBG: x=${TitleBG.x}, y=${TitleBG.y}`);
-        const DinoFishing = this.add.image(800, 250, 'DinoFishing').setScale(0.6);
+        const DinoFishing = this.add.image(800, 350, 'DinoFishing').setScale(0.6);
             console.log(`Dino Fishing: x=${DinoFishing.x}, y=${DinoFishing.y}`);
         
         
-        const playButton = this.add.image(800, 500, 'Play').setScale(0.6).setInteractive();
+        const playButton = this.add.image(800, 400, 'Play').setScale(0.6).setInteractive();
 
         this.tweens.add({
             targets: playButton, 
-            y: 520, 
+            y: 420, 
             duration: 1000,
             yoyo: true, 
             repeat: -1, 
