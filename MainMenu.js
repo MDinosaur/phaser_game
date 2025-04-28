@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 
-class MainScene extends Phaser.Scene {
+class MainMenu extends Phaser.Scene {
     constructor() {
         super({ key: 'MainScene' });
     }
@@ -8,7 +8,7 @@ const config = {
     type: Phaser.AUTO,
     width: 800,
     height: 600,
-    scene: [MainScene],
+    scene: [MainMenu],
 };
 
 const game = new Phaser.Game(config);
