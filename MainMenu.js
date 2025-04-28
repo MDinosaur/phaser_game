@@ -28,7 +28,7 @@ export default class MainMenu extends Phaser.Scene {
         playButton.on('pointerdown', () => {
             console.log('Play button clicked!');
         });
-        
+        this.scale.refresh();
     }
 }
 
