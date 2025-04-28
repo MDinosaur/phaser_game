@@ -1,5 +1,9 @@
-import MainScene from 'MainScene.js';
+import Phaser from 'phaser';
 
+class MainScene extends Phaser.Scene {
+    constructor() {
+        super({ key: 'MainScene' });
+    }
 const config = {
     type: Phaser.AUTO,
     width: 800,
@@ -8,9 +12,7 @@ const config = {
 };
 
 const game = new Phaser.Game(config);
- export default class MainScene extends Phaser.Scene {
-    constructor() {
-        super({ key: 'MainScene' });
+ 
     }
 
     preload() {
@@ -23,14 +25,23 @@ const game = new Phaser.Game(config);
     create() {
         this.add.image(400, 300, 'TitleBG');
         this.add.image(192, 69, 'DinoFishing');
-        this.add.image(195, 181, 'Play');
-        this.add.image(-75, -44, 'Option');
+        this.add.image(192, 40, 'Play');
+        
+        const playButton = this.add.image(400, 300, 'Play');
 
-        const logo = document.querySelector('#Play');
+        this.tweens.add({
+            targets: playButton, 
+            y: 320, 
+            duration: 1000,
+            yoyo: true, 
+            repeat: -1, 
+            ease: 'Sine.easeInOut' 
+        });
+        
+        playButton.on('pointerdown', () => {
+            console.log('Play button clicked!');
+        });
 
-        function hover() {
-            console.log('Hover function excuted!');
-        }
-        window.addEventListener('DOMContentLoaded', () => {
+        
     }
 }
