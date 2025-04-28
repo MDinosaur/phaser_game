@@ -11,22 +11,24 @@ export default class MainMenu extends Phaser.Scene {
     }
 
     create() {
-        this.add.image(750, 400, 'TitleBG').setScale(0.6);
-        this.add.image(392, 69, 'DinoFishing');
+        this.add.image(800, 400, 'TitleBG').setScale(0.7);
+        this.add.image(800, 69, 'DinoFishing').setScale(0.7);
         
-        const playButton = this.add.image(800, 600, 'Play').setInteractive();
+        const playButton = this.add.image(800, 600, 'Play').setScale(0.7).setInteractive();
 
         this.tweens.add({
             targets: playButton, 
-            y: 320, 
+            y: 580, 
             duration: 1000,
             yoyo: true, 
             repeat: -1, 
             ease: 'Sine.easeInOut' 
         });
         
-        playButton.on('pointerdown', () => {
+        playButton.on('pointerdown', (pointer) => {
+        if (pointer.isOver) {
             console.log('Play button clicked!');
+        }
         });
         this.scale.refresh();
     }
