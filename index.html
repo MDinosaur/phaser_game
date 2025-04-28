@@ -26,7 +26,12 @@ var config = {
         createContainer: true
     },
     parent: "body",
-    scene: [MainMenu]
+    scene: [MainMenu],
+    default: 'arcade',
+        arcade: {
+            debug: true,
+        }
+        
 }
 
 const game = new Phaser.Game (config);
