@@ -4,31 +4,22 @@
     <title>Dino_Fishing</title>
     <script src="https://cdn.jsdelivr.net/npm/phaser@v3.88.2/dist/phaser.min.js"></script>
     <style type="text/css">
-    <script stype="module" src="MainMenu.js"></script>
         body {
             margin: 0;
         }
     </style>
+    
 </head>
 <body>
-
-<script type="text/javascript">
-
-    import MainMenu from 'MainMenu.js.';
+<script type="module">
+        import MainMenu from './MainMenu.js.';
+<script type="text/javascript"> 
 
 var config = {
     type: Phaser.AUTO,
     width: 800,
     height: 600,
     backgroundColor: "#343434",
-    min: {
-        width: 480,
-        height: 340,
-    },
-    max: {
-        width: 1024,
-        height: 1280,
-    },
     scale: {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH
@@ -41,22 +32,8 @@ var config = {
 }
 
 const game = new Phaser.Game (config);
-    }
-    preload(){
-        this.load.image('TitleBG', 'Dino Fishing Title screen/Title background.png');
-        this.load.image('DinoFishing', 'Dino Fishing Title screen/Dino fishing title.png');
-        this.load.image('Play', 'Dino Fishing Title screen/Play button.png');
-        this.load.image('Option', 'Dino Fishing Title screen/Option button.png');
-    }
 
-    create() {
-    this.scene.add('MainMenu');
-        this.scene.start('MainMenu');
-    }
-
-    update(){
-
-    }
+    
   //this.scene.add (MainMenu)
   //comic book scene (no plan to do) 
   // this.scene.add (Prolouge)
@@ -64,3 +41,4 @@ const game = new Phaser.Game (config);
   //this.scene.add (Fishing)
   //this.scene.add (Town)
   //this.scene.add (Fish Market)
+</script>
