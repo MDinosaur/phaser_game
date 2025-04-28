@@ -2,17 +2,7 @@ import Phaser from 'phaser';
 
 class MainMenu extends Phaser.Scene {
     constructor() {
-        super({ key: 'MainScene' });
-    }
-const config = {
-    type: Phaser.AUTO,
-    width: 800,
-    height: 600,
-    scene: [MainMenu],
-};
-
-const game = new Phaser.Game(config);
- 
+        super({ key: 'MainMenu' });
     }
 
     preload() {
@@ -25,9 +15,8 @@ const game = new Phaser.Game(config);
     create() {
         this.add.image(400, 300, 'TitleBG');
         this.add.image(192, 69, 'DinoFishing');
-        this.add.image(192, 40, 'Play');
         
-        const playButton = this.add.image(400, 300, 'Play');
+        const playButton = this.add.image(192, 40, 'Play').setInteractive();
 
         this.tweens.add({
             targets: playButton, 
@@ -41,7 +30,14 @@ const game = new Phaser.Game(config);
         playButton.on('pointerdown', () => {
             console.log('Play button clicked!');
         });
-
         
     }
 }
+
+const config = {
+    type: Phaser.AUTO,
+    width: 800,
+    height: 600,
+    scene: [MainMenu],
+};
+ const game = new Phaser.Game(config);
