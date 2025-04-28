@@ -41,9 +41,22 @@ var config = {
 }
 
 const game = new Phaser.Game (config);
+    }
+    preload(){
+        this.load.image('TitleBG', 'Dino Fishing Title screen/Title background.png');
+        this.load.image('DinoFishing', 'Dino Fishing Title screen/Dino fishing title.png');
+        this.load.image('Play', 'Dino Fishing Title screen/Play button.png');
+        this.load.image('Option', 'Dino Fishing Title screen/Option button.png');
+    }
 
-    preload{ }
+    create() {
+    this.scene.add('MainMenu');
+        this.scene.start('MainMenu');
+    }
 
+    update(){
+
+    }
   //this.scene.add (MainMenu)
   //comic book scene (no plan to do) 
   // this.scene.add (Prolouge)
