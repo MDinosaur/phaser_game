@@ -11,8 +11,8 @@ export default class MainMenu extends Phaser.Scene {
     }
 
     create() {
-        this.add.image(400, 300, 'TitleBG');
-        this.add.image(192, 69, 'DinoFishing');
+        this.add.image(600, 800, 'TitleBG');
+        this.add.image(392, 69, 'DinoFishing');
         
         const playButton = this.add.image(192, 40, 'Play').setInteractive();
 
@@ -34,8 +34,8 @@ export default class MainMenu extends Phaser.Scene {
 
 const config = {
     type: Phaser.AUTO,
-    width: 1200,
-    height: 1600,
+    width: 1600,
+    height: 1200,
     scene: [MainMenu],
 };
  const game = new Phaser.Game(config);
