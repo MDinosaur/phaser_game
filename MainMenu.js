@@ -49,7 +49,7 @@ export default class MainMenu extends Phaser.Scene {
 
         const graphics = this.add.graphics();
 graphics.lineStyle(2, 0xff0000, 1); 
-graphics.strokeRect(597, 400, 300, 100); 
+graphics.strokeRect(720, 400, 300, 100); 
 
         this.scale.refresh();
     }
