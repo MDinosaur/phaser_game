@@ -46,8 +46,8 @@ playButton.on('pointerdown', (pointer) => {
     console.log('Play button clicked at: ', pointer.x, pointer.y); 
         });
 
-        const optionButton = this.add.image(720, 450, 'Option').setScale(0.6).setInteractive({
-            hitArea: new Phaser.Geom.Rectangle(850, 1115, 450, 180),
+        const optionButton = this.add.image(720, 580, 'Option').setScale(0.6).setInteractive({
+            hitArea: new Phaser.Geom.Rectangle(0, 0, 525, 160),
      hitAreaCallback: Phaser.Geom.Rectangle.Contains,
      useHandCursor: true
         });
