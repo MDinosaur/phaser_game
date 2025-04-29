@@ -26,8 +26,12 @@ export default class MainMenu extends Phaser.Scene {
         });
         
         
-        const playButton = this.add.image(720, 365, 'Play').setScale(0.6).setInteractive();
-
+        const playButton = this.add.image(720, 365, 'Play').setScale(0.6).setInteractive({
+              hitArea: new Phaser.Geom.Rectangle(320, 400, 300, 100),
+    hitAreaCallback: Phaser.Geom.Rectangle.Contains,
+    useHandCursor: true
+        });
+        
         this.tweens.add({
             targets: playButton, 
             y: 385, 
@@ -36,21 +40,14 @@ export default class MainMenu extends Phaser.Scene {
             repeat: -1, 
             ease: 'Sine.easeInOut' 
         });
-        playButton.setInteractive({
-    hitArea: new Phaser.Geom.Rectangle(320, 400, 300, 100),
-    hitAreaCallback: Phaser.Geom.Rectangle.Contains,
-    useHandCursor: false
-        });
-        this.input.on('pointermove', (pointer) => {
-    console.log(`Pointer moving at: x=${pointer.x}, y=${pointer.y}`);
-});
+        
 
-this.input.on('pointerdown', (pointer) => {
-    console.log(`Global pointer click at: x=${pointer.x}, y=${pointer.y}`);
-    if (!Phaser.Geom.Rectangle.Contains(playButton.input.hitArea, pointer.x, pointer.y)) {
-        console.log('Pointer is outside the hit area!');
+playButton.on('pointerdown', (pointer) => {
+    console.log('Button clicked at: ', pointer.x, pointer.y); 
+)};
     }
-});
+
+
 
 const config = {
     type: Phaser.AUTO,
