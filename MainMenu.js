@@ -64,7 +64,6 @@ playButton.on('pointerdown', (pointer) => {
         this.showNotification("Options are irrevlant :3");
     });
 }
-
 showNotification(message) {
     
     const bg = this.add.rectangle(720, 400, 600, 200, 0x000000, 0.7);
@@ -77,7 +76,9 @@ showNotification(message) {
     this.time.delayedCall(3000, () => {
         bg.destroy();
         text.destroy();
-    });
+        });
+    }
+
 }
 
 
