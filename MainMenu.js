@@ -27,7 +27,7 @@ export default class MainMenu extends Phaser.Scene {
         
         
         const playButton = this.add.image(720, 365, 'Play').setScale(0.6).setInteractive({
-              hitArea: new Phaser.Geom.Rectangle(570, 515, 300, 150),
+              hitArea: new Phaser.Geom.Rectangle(570, 715, 450, 150),
     hitAreaCallback: Phaser.Geom.Rectangle.Contains,
     useHandCursor: true
         });
@@ -43,7 +43,7 @@ export default class MainMenu extends Phaser.Scene {
         
         const graphics = this.add.graphics();
  graphics.lineStyle(2, 0xff0000, 1); 
- graphics.strokeRect(570, 315, 300, 100); 
+ graphics.strokeRect(560, 480, 310, 150); 
 
 playButton.on('pointerdown', (pointer) => {
     console.log('Button clicked at: ', pointer.x, pointer.y); 
