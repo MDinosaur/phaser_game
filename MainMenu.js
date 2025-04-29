@@ -47,13 +47,9 @@ export default class MainMenu extends Phaser.Scene {
             console.log(pointer); 
         });
 
-    const graphics = this.add.graphics();
-        graphics.lineStyle(2, 0xff0000, 1);
-        graphics.strokeRect(
-        playButton.x - playButton.displayWidth / 2,
-        playButton.y - playButton.displayHeight / 2,
-        playButton.displayWidth,
-        playButton.displayHeight
+        const graphics = this.add.graphics();
+graphics.lineStyle(2, 0xff0000, 1); 
+graphics.strokeRect(597, 166, 300, 300); 
 );
         this.scale.refresh();
     }
