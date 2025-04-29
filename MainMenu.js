@@ -42,7 +42,7 @@ export default class MainMenu extends Phaser.Scene {
         });
         
 playButton.on('pointerdown', (pointer) => {
-    console.log('Button clicked at: ', pointer.x, pointer.y); 
+    console.log('Play button clicked at: ', pointer.x, pointer.y); 
         });
 
         const optionButton = this.add.image(720, 425, 'Option').setScale(0.6).setInteractive({
@@ -60,7 +60,7 @@ playButton.on('pointerdown', (pointer) => {
             ease: 'Sine.easeInOut' 
         });
         optionButton.on('pointerdown', (pointer) => {
-    console.log('Button clicked at: ', pointer.x, pointer.y); 
+    console.log('Opton button clicked at: ', pointer.x, pointer.y); 
         });
     }
 }
