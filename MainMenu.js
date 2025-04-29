@@ -44,8 +44,9 @@ export default class MainMenu extends Phaser.Scene {
 
 playButton.on('pointerdown', (pointer) => {
     console.log('Button clicked at: ', pointer.x, pointer.y); 
-)};
+        });
     }
+}
 
 
 
