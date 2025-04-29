@@ -37,23 +37,20 @@ export default class MainMenu extends Phaser.Scene {
             ease: 'Sine.easeInOut' 
         });
         playButton.setInteractive({
-    hitArea: new Phaser.Geom.Rectangle(720, 400, 300, 100),
+    hitArea: new Phaser.Geom.Rectangle(320, 400, 300, 100),
     hitAreaCallback: Phaser.Geom.Rectangle.Contains,
-    useHandCursor: true
+    useHandCursor: false
         });
-        playButton.on('pointerdown', (pointer) => {
-            console.log('Play button clicked!');
-            console.log(`Pointer coordinates: x=${pointer.x}, y=${pointer.y}`);
-            console.log(pointer); 
-        });
+        this.input.on('pointermove', (pointer) => {
+    console.log(`Pointer moving at: x=${pointer.x}, y=${pointer.y}`);
+});
 
-        const graphics = this.add.graphics();
-graphics.lineStyle(2, 0xff0000, 1); 
-graphics.strokeRect(720, 400, 300, 100); 
-
-        this.scale.refresh();
+this.input.on('pointerdown', (pointer) => {
+    console.log(`Global pointer click at: x=${pointer.x}, y=${pointer.y}`);
+    if (!Phaser.Geom.Rectangle.Contains(playButton.input.hitArea, pointer.x, pointer.y)) {
+        console.log('Pointer is outside the hit area!');
     }
-}
+});
 
 const config = {
     type: Phaser.AUTO,
