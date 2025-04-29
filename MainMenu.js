@@ -55,7 +55,7 @@ playButton.on('pointerdown', (pointer) => {
         
         this.tweens.add({
             targets: optionButton, 
-            y: 470, 
+            y: 600, 
             duration: 1000,
             yoyo: true, 
             repeat: -1, 
