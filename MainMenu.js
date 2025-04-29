@@ -46,7 +46,7 @@ playButton.on('pointerdown', (pointer) => {
         });
 
         const optionButton = this.add.image(720, 365, 'Option').setScale(0.6).setInteractive({
-              hitArea: new Phaser.Geom.Rectangle(550, 815, 500, 180),
+              hitArea: new Phaser.Geom.Rectangle(650, 815, 500, 180),
     hitAreaCallback: Phaser.Geom.Rectangle.Contains,
     useHandCursor: true
         });
@@ -73,7 +73,7 @@ showNotification(message) {
         align: 'center' 
     }).setOrigin(0.5);
 
-    this.time.delayedCall(3000, () => {
+    this.time.delayedCall(2000, () => {
         bg.destroy();
         text.destroy();
         });
