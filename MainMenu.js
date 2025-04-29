@@ -36,11 +36,15 @@ export default class MainMenu extends Phaser.Scene {
             repeat: -1, 
             ease: 'Sine.easeInOut' 
         });
-        
+        playButton.setInteractive({
+    hitArea: new Phaser.Geom.Rectangle(0, 0, playButton.width, playButton.height),
+    hitAreaCallback: Phaser.Geom.Rectangle.Contains,
+    useHandCursor: true
+        });
         playButton.on('pointerdown', (pointer) => {
             console.log('Play button clicked!');
             console.log(`Pointer coordinates: x=${pointer.x}, y=${pointer.y}`);
-            console.log(pointer);
+            console.log(pointer); 
         });
         this.scale.refresh();
     }
