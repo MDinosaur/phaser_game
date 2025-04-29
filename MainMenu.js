@@ -45,15 +45,15 @@ playButton.on('pointerdown', (pointer) => {
     console.log('Play button clicked at: ', pointer.x, pointer.y); 
         });
 
-        const optionButton = this.add.image(720, 425, 'Option').setScale(0.6).setInteractive({
-              hitArea: new Phaser.Geom.Rectangle(550, 915, 500, 200),
+        const optionButton = this.add.image(720, 390, 'Option').setScale(0.6).setInteractive({
+              hitArea: new Phaser.Geom.Rectangle(550, 815, 500, 200),
     hitAreaCallback: Phaser.Geom.Rectangle.Contains,
     useHandCursor: true
         });
 
         this.tweens.add({
             targets: optionButton, 
-            y: 445, 
+            y: 410, 
             duration: 1000,
             yoyo: true, 
             repeat: -1, 
@@ -61,8 +61,23 @@ playButton.on('pointerdown', (pointer) => {
         });
         optionButton.on('pointerdown', (pointer) => {
     console.log('Opton button clicked at: ', pointer.x, pointer.y); 
-        });
-    }
+        this.showNotification("Options are irrevlant :3");
+    });
+}
+
+showNotification(message) {
+    
+    const bg = this.add.rectangle(720, 400, 600, 200, 0x000000, 0.7);
+    const text = this.add.text(720, 400, message, { 
+        font: '32px Arial', 
+        fill: '#ffffff', 
+        align: 'center' 
+    }).setOrigin(0.5);
+
+    this.time.delayedCall(3000, () => {
+        bg.destroy();
+        text.destroy();
+    });
 }
 
 
