@@ -11,17 +11,26 @@ export default class MainMenu extends Phaser.Scene {
     }
 
     create() {
-        const TitleBG = this.add.image(700, 400, 'TitleBG').setScale(0.7);
+        const TitleBG = this.add.image(800, 400, 'TitleBG').setScale(0.6);
             console.log(`TitleBG: x=${TitleBG.x}, y=${TitleBG.y}`);
-        const DinoFishing = this.add.image(800, 350, 'DinoFishing').setScale(0.6);
+        const DinoFishing = this.add.image(800, 350, 'DinoFishing').setScale(0.6).setInteractive();
             console.log(`Dino Fishing: x=${DinoFishing.x}, y=${DinoFishing.y}`);
+
+        this.tweens.add({
+            targets: DinoFishing, 
+            y: 370, 
+            duration: 1000,
+            yoyo: true, 
+            repeat: -1, 
+            ease: 'Sine.easeInOut' 
+        });
         
         
-        const playButton = this.add.image(800, 400, 'Play').setScale(0.6).setInteractive();
+        const playButton = this.add.image(800, 380, 'Play').setScale(0.6).setInteractive();
 
         this.tweens.add({
             targets: playButton, 
-            y: 420, 
+            y: 400, 
             duration: 1000,
             yoyo: true, 
             repeat: -1, 
@@ -29,9 +38,9 @@ export default class MainMenu extends Phaser.Scene {
         });
         
         playButton.on('pointerdown', (pointer) => {
-        if (pointer.isOver) {
             console.log('Play button clicked!');
-        }
+            console.log(`Pointer coordinates: x=${pointer.x}, y=${pointer.y}`);
+            console.log(pointer);
         });
         this.scale.refresh();
     }
