@@ -27,7 +27,7 @@ export default class MainMenu extends Phaser.Scene {
         
         
         const playButton = this.add.image(720, 365, 'Play').setScale(0.6).setInteractive({
-              hitArea: new Phaser.Geom.Rectangle(550, 715, 500, 200),
+              hitArea: new Phaser.Geom.Rectangle(450, 715, 500, 200),
     hitAreaCallback: Phaser.Geom.Rectangle.Contains,
     useHandCursor: true
         });
