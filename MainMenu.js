@@ -41,6 +41,9 @@ export default class MainMenu extends Phaser.Scene {
             ease: 'Sine.easeInOut' 
         });
         
+        const graphics = this.add.graphics();
+ graphics.lineStyle(2, 0xff0000, 1); 
+ graphics.strokeRect(320, 400, 300, 100); 
 
 playButton.on('pointerdown', (pointer) => {
     console.log('Button clicked at: ', pointer.x, pointer.y); 
