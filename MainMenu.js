@@ -54,7 +54,7 @@ playButton.on('pointerdown', (pointer) => {
             ease: 'Sine.easeInOut' 
         });
         optionButton.on('pointerdown', (pointer) => {
-    console.log('Opton button clicked at: ', pointer.x, pointer.y); 
+    console.log('Option button clicked at: ', pointer.x, pointer.y); 
         this.showNotification("Options are irrevlant :3");
     });
 }
