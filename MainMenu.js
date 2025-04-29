@@ -37,7 +37,7 @@ export default class MainMenu extends Phaser.Scene {
             ease: 'Sine.easeInOut' 
         });
         playButton.setInteractive({
-    hitArea: new Phaser.Geom.Rectangle(0, 0, playButton.width, playButton.height),
+    hitArea: new Phaser.Geom.Rectangle(0, 0, 597, 166),
     hitAreaCallback: Phaser.Geom.Rectangle.Contains,
     useHandCursor: true
         });
