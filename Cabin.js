@@ -22,9 +22,9 @@ export default class Cabin extends Phaser.Scene {
 
        const CabinBG = this.add.image(720, 400, 'CabinBG').setScale(0.65); 
            console.log(`CabinBG: x=${CabinBG.x}, y=${CabinBG.y}`);
-       const Note = this.add.image(720, 400, 'Note').setScale(0.6);
+       const Note = this.add.image(600, 250, 'Note').setScale(0.6);
            console.log(`Note: x=${Note.x}, y=${Note.y}`);
-       const UI_Closed = this.add.image(720, 400, 'UI_Closed').setScale(0.6);
+       const UI_Closed = this.add.image(720, 400, 'UI_Closed').setScale(0.62);
            console.log(`UI_Closed: x=${UI_Closed.x}, y=${UI_Closed.y}`);
        //const Inventory = this.add.image(720, 400, 'Inventory').setScale(0.65); const Journal = this.add.iamge(720, 400, 'Journal').setScale(0.65);
        
