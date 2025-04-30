@@ -10,7 +10,7 @@ export default class Cabin extends Phaser.Scene {
        this.load.image('CabinBG', 'Dino Fishing Cabin/Cabin.png');
        this.load.image('Note', 'Dino Fishing Cabin/Note.png');
        this.load.image('UI_Closed', 'Dino Fishing Cabin/Interface_closed.png');
-       this.load.image('InventoryOpened', 'Dino Fishing Cabin/Inventory_opened.png');
+       //this.load.image('InventoryOpened', 'Dino Fishing Cabin/Inventory_opened.png');
        this.load.image('JournalOpened', 'Dino Fishing Cabin/Journal_opened.png');
        this.load.image('JournalIcon', 'Dino Fishing Cabin/Journalicon.png');
        this.load.image('InventoryIcon', 'Dino Fishing Cabin/Inventoryicon.png');
@@ -29,7 +29,7 @@ export default class Cabin extends Phaser.Scene {
        //const Inventory = this.add.image(720, 400, 'Inventory').setScale(0.65); const Journal = this.add.iamge(720, 400, 'Journal').setScale(0.65);
        
  // const placeholder = this.add.image(-,0 'placeholder').setScale(0.6);
-       const JournalIcon = this.add.image(900, 1000, 'JournalIcon').setScale(0.6).setInteractive({
+       const JournalIcon = this.add.image(800, 500, 'JournalIcon').setScale(0.6).setInteractive({
            hitArea: new Phaser.Geom.Rectangle(0, 0, 134, 116),
      hitAreaCallback: Phaser.Geom.Rectangle.Contains,
      useHandCursor: true
