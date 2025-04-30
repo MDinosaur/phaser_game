@@ -44,7 +44,12 @@ export default class MainMenu extends Phaser.Scene {
         
 playButton.on('pointerdown', (pointer) => {
     console.log('Play button clicked at: ', pointer.x, pointer.y); 
-        });
+        this.cameras.main.fadeOut(1000, 0, 0, 0);
+        this.cameras.main.once('camerafadeoutcomplete', () => {
+    this.scene.start('Cabin'); 
+            
+    });
+});
 
         const optionButton = this.add.image(720, 580, 'Option').setScale(0.6).setInteractive({
             hitArea: new Phaser.Geom.Rectangle(0, 0, 525, 160),
@@ -89,6 +94,6 @@ const config = {
     type: Phaser.AUTO,
     width: 1600,
     height: 1200,
-    scene: [MainMenu],
+    scene: [MainMenu, Cabin]
 };
  const game = new Phaser.Game(config);
