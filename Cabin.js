@@ -1,4 +1,5 @@
 //placeholder for prolouge
+//import Market from './Market'; import Town from './Town';
 export default class Cabin extends Phaser.Scene {
     constructor() {
         super({ key: 'Cabin' });
