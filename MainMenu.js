@@ -26,7 +26,7 @@ export default class MainMenu extends Phaser.Scene {
         });
         
         
-        const playButton = this.add.image(720, 400, 'Play').setScale(0.6).setInteractive({
+        const playButton = this.add.image(720, 430, 'Play').setScale(0.6).setInteractive({
             hitArea: new Phaser.Geom.Rectangle(0, 0, 525, 160),
      hitAreaCallback: Phaser.Geom.Rectangle.Contains,
      useHandCursor: true
@@ -35,7 +35,7 @@ export default class MainMenu extends Phaser.Scene {
         
         this.tweens.add({
             targets: playButton, 
-            y: 420, 
+            y: 450, 
             duration: 1000,
             yoyo: true, 
             repeat: -1, 
