@@ -94,6 +94,6 @@ const config = {
     type: Phaser.AUTO,
     width: 1600,
     height: 1200,
-    scene: [MainMenu, Cabin]
+    scene: [MainMenu]
 };
  const game = new Phaser.Game(config);
