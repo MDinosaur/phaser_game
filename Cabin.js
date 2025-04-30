@@ -34,7 +34,7 @@ export default class Cabin extends Phaser.Scene {
      hitAreaCallback: Phaser.Geom.Rectangle.Contains,
      useHandCursor: true
         });
-       console.log(`JournalOpened: x=${JournalOpened.x}, y=${JournalOpened.y}`);
+       console.log(`JournalIcon: x=${JournalIcon.x}, y=${JournalIcon.y}`);
 
        JournalIcon.on('pointerdown', (pointer) => {
     console.log('Journal button clicked at: ', pointer.x, pointer.y); 
