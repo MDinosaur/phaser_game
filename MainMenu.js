@@ -4,8 +4,8 @@ export default class MainMenu extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('TitleBG', 'Dino Fishing Title screen/DinoFishingTitle.png');
-        this.load.image('DinoFishing', 'Dino Fishing Title screen/Dino fishing title.png');
+        this.load.image('TitleBG', 'Dino Fishing Title screen/Title background.png');
+        this.load.image('DinoFishing', 'Dino Fishing Title screen/DinoFishingTitle.png');
         this.load.image('Play', 'Dino Fishing Title screen/Play button.png');
         this.load.image('Option', 'Dino Fishing Title screen/Option button.png');
     }
