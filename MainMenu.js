@@ -1,3 +1,4 @@
+import Cabin from './Cabin.js';
 export default class MainMenu extends Phaser.Scene {
     constructor() {
         super({ key: 'MainMenu' });
@@ -94,6 +95,6 @@ const config = {
     type: Phaser.AUTO,
     width: 1600,
     height: 1200,
-    scene: [MainMenu]
+    scene: [MainMenu, Cabin]
 };
  const game = new Phaser.Game(config);
