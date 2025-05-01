@@ -10,7 +10,7 @@ export default class Cabin extends Phaser.Scene {
        this.load.image('CabinBG', 'Dino Fishing Cabin/Cabin.png');
        this.load.image('Note', 'Dino Fishing Cabin/Note.png');
        this.load.image('UI_Closed', 'Dino Fishing Cabin/Interface_closed.png');
-       //this.load.image('InventoryOpened', 'Dino Fishing Cabin/Inventory_opened.png');
+       this.load.image('InventoryOpened', 'Dino Fishing Cabin/InventoryOpened.png');
        this.load.image('JournalOpened', 'Dino Fishing Cabin/Journal_opened.png');
        this.load.image('JournalIcon', 'Dino Fishing Cabin/Journalicon.png');
        this.load.image('InventoryIcon', 'Dino Fishing Cabin/Inventoryicon.png');
@@ -76,7 +76,7 @@ export default class Cabin extends Phaser.Scene {
        const UI_Closed = this.add.image(720, 400, 'UI_Closed').setScale(0.62);
            console.log(`UI_Closed: x=${UI_Closed.x}, y=${UI_Closed.y}`);
        //const Inventory = this.add.image(720, 400, 'Inventory').setScale(0.65); const Journal = this.add.iamge(720, 400, 'Journal').setScale(0.65);
-       const NormalEel = this.add.image(490, 550, 'NormalEel').setScale(2);
+       const NormalEel = this.add.image(490, 550, 'NormalEel').setScale(1);
            console.log(`NormalEel: x=${NormalEel.x}, y=${NormalEel.y}`);
        //if status = Hungry change.texture('HungryEel') and so on...
  // const placeholder = this.add.image(-,0 'placeholder').setScale(0.6);
@@ -87,9 +87,16 @@ export default class Cabin extends Phaser.Scene {
         });
        console.log(`JournalIcon: x=${JournalIcon.x}, y=${JournalIcon.y}`);
 
+       let isJournalOpen = false
        JournalIcon.on('pointerdown', (pointer) => {
-    console.log('Journal button clicked at: ', pointer.x, pointer.y); 
-       });
+    console.log('Journal button clicked at: ', pointer.x, pointer.y);
+          if (isJournalOpen) {
+        JournalIcon.setTexture('JournalIcon');
+    } else {
+        JournalIcon.setTexture('JournalOpened'); 
+    }
+    isJournalOpen = !isJournalOpen; 
+});
 
        const InventoryIcon = this.add.image(1027, 520, 'InventoryIcon').setScale(0.61).setInteractive({
            hitArea: new Phaser.Geom.Rectangle(0, 0, 134, 116),
@@ -98,8 +105,15 @@ export default class Cabin extends Phaser.Scene {
         });
        console.log(`InventorylIcon: x=${InventoryIcon.x}, y=${InventoryIcon.y}`);
 
+       let isInventoryOpen = false
        InventoryIcon.on('pointerdown', (pointer) => {
     console.log('Inventory button clicked at: ', pointer.x, pointer.y); 
+          if (isInventoryOpen) {
+        InventoryIcon.setTexture('InventoryIcon');
+    } else {
+        InventoryIcon.setTexture('InventoryOpened'); 
+    }
+    isInventoryOpen = !isInventoryOpen;
        });
     }
 
