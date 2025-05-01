@@ -94,7 +94,7 @@ export default class Cabin extends Phaser.Scene {
         //JournalIcon.setTexture('JournalIcon');
     //} else {
         //JournalIcon.setTexture('JournalOpened'); 
-    }
+    //}
     //isJournalOpen = !isJournalOpen; 
 });
 
