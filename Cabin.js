@@ -90,12 +90,12 @@ export default class Cabin extends Phaser.Scene {
        let isJournalOpen = false
        JournalIcon.on('pointerdown', (pointer) => {
     console.log('Journal button clicked at: ', pointer.x, pointer.y);
-          if (isJournalOpen) {
-        JournalIcon.setTexture('JournalIcon');
-    } else {
-        JournalIcon.setTexture('JournalOpened'); 
+          //if (isJournalOpen) {
+        //JournalIcon.setTexture('JournalIcon');
+    //} else {
+        //JournalIcon.setTexture('JournalOpened'); 
     }
-    isJournalOpen = !isJournalOpen; 
+    //isJournalOpen = !isJournalOpen; 
 });
 
        const InventoryIcon = this.add.image(1027, 520, 'InventoryIcon').setScale(0.61).setInteractive({
@@ -105,15 +105,15 @@ export default class Cabin extends Phaser.Scene {
         });
        console.log(`InventorylIcon: x=${InventoryIcon.x}, y=${InventoryIcon.y}`);
 
-       let isInventoryOpen = false
+       //let isInventoryOpen = false
        InventoryIcon.on('pointerdown', (pointer) => {
     console.log('Inventory button clicked at: ', pointer.x, pointer.y); 
-          if (isInventoryOpen) {
-        InventoryIcon.setTexture('InventoryIcon');
-    } else {
-        InventoryIcon.setTexture('InventoryOpened'); 
-    }
-    isInventoryOpen = !isInventoryOpen;
+          //if (isInventoryOpen) {
+        //InventoryIcon.setTexture('InventoryIcon');
+    //} else {
+        //InventoryIcon.setTexture('InventoryOpened'); 
+    //}
+    //isInventoryOpen = !isInventoryOpen;
        });
     }
 
