@@ -14,6 +14,7 @@ export default class Cabin extends Phaser.Scene {
        this.load.image('JournalOpened', 'Dino Fishing Cabin/Journal_opened.png');
        this.load.image('JournalIcon', 'Dino Fishing Cabin/Journalicon.png');
        this.load.image('InventoryIcon', 'Dino Fishing Cabin/Inventoryicon.png');
+       this.load.image('NormalEel', 'Dino Fishing Cabin/Normal Eel Spirite.png')
 // this.load.image('UI', 'assets'); this.load.image('Inventory', 'assets'); this.load.image('Journal', 'assets');
      
    }
@@ -22,12 +23,25 @@ export default class Cabin extends Phaser.Scene {
 
        const CabinBG = this.add.image(720, 400, 'CabinBG').setScale(0.65); 
            console.log(`CabinBG: x=${CabinBG.x}, y=${CabinBG.y}`);
-       const Note = this.add.image(570, 295, 'Note').setScale(0.6);
-           console.log(`Note: x=${Note.x}, y=${Note.y}`);
+       const Note = this.add.image(570, 295, 'Note').setScale(0.6).setInteractive({
+           hitArea: new Phaser.Geom.Rectangle(0, 0, 57, 76),
+     hitAreaCallback: Phaser.Geom.Rectangle.Contains,
+     useHandCursor: true
+       });
+       console.log(`Note: x=${Note.x}, y=${Note.y}`);
+       
+           Note.on('pointerdown', (pointer) => {
+    console.log('Journal button clicked at: ', pointer.x, pointer.y); 
+               note.visible = false;
+               note.disableInteractive();
+       });
+       
        const UI_Closed = this.add.image(720, 400, 'UI_Closed').setScale(0.62);
            console.log(`UI_Closed: x=${UI_Closed.x}, y=${UI_Closed.y}`);
        //const Inventory = this.add.image(720, 400, 'Inventory').setScale(0.65); const Journal = this.add.iamge(720, 400, 'Journal').setScale(0.65);
-       
+       const NormalEel = this.add.image(720, 500, 'NormalEel').setScale(0.6);
+           console.log(`NormalEel: x=${NormalEel.x}, y=${NormalEel.y}`);
+       //if status = Hungry change.texture('HungryEel') and so on...
  // const placeholder = this.add.image(-,0 'placeholder').setScale(0.6);
        const JournalIcon = this.add.image(1131.5, 520, 'JournalIcon').setScale(0.61).setInteractive({
            hitArea: new Phaser.Geom.Rectangle(0, 0, 134, 116),
