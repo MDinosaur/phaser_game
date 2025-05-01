@@ -45,8 +45,8 @@ export default class MainMenu extends Phaser.Scene {
         
 playButton.on('pointerdown', (pointer) => {
     console.log('Play button clicked at: ', pointer.x, pointer.y); 
-        this.cameras.main.fadeOut(1000, 0, 0, 0);
-        this.cameras.main.once('camerafadeoutcomplete', () => {
+        //this.cameras.main.fadeOut(1000, 0, 0, 0);
+        //this.cameras.main.once('camerafadeoutcomplete', () => {
     this.scene.start('Cabin'); 
             
     });
