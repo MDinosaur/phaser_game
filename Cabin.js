@@ -76,11 +76,11 @@ export default class Cabin extends Phaser.Scene {
        const UI_Closed = this.add.image(720, 400, 'UI_Closed').setScale(0.62);
            console.log(`UI_Closed: x=${UI_Closed.x}, y=${UI_Closed.y}`);
        //const Inventory = this.add.image(720, 400, 'Inventory').setScale(0.65); const Journal = this.add.iamge(720, 400, 'Journal').setScale(0.65);
-       const NormalEel = this.add.image(490, 550, 'NormalEel').setScale(1);
+       const NormalEel = this.add.image(490, 550, 'NormalEel').setScale(2);
            console.log(`NormalEel: x=${NormalEel.x}, y=${NormalEel.y}`);
        //if status = Hungry change.texture('HungryEel') and so on...
  // const placeholder = this.add.image(-,0 'placeholder').setScale(0.6);
-       const JournalIcon = this.add.image(1129, 520, 'JournalIcon').setScale(0.61).setInteractive({
+       const JournalIcon = this.add.image(1128, 520, 'JournalIcon').setScale(0.61).setInteractive({
            hitArea: new Phaser.Geom.Rectangle(0, 0, 134, 116),
      hitAreaCallback: Phaser.Geom.Rectangle.Contains,
      useHandCursor: true
@@ -91,7 +91,7 @@ export default class Cabin extends Phaser.Scene {
     console.log('Journal button clicked at: ', pointer.x, pointer.y); 
        });
 
-       const InventoryIcon = this.add.image(1024, 520, 'InventoryIcon').setScale(0.61).setInteractive({
+       const InventoryIcon = this.add.image(1027, 520, 'InventoryIcon').setScale(0.61).setInteractive({
            hitArea: new Phaser.Geom.Rectangle(0, 0, 134, 116),
      hitAreaCallback: Phaser.Geom.Rectangle.Contains,
      useHandCursor: true
