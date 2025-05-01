@@ -22,14 +22,14 @@ export default class Cabin extends Phaser.Scene {
 
        const CabinBG = this.add.image(720, 400, 'CabinBG').setScale(0.65); 
            console.log(`CabinBG: x=${CabinBG.x}, y=${CabinBG.y}`);
-       const Note = this.add.image(560, 380, 'Note').setScale(0.6);
+       const Note = this.add.image(560, 280, 'Note').setScale(0.6);
            console.log(`Note: x=${Note.x}, y=${Note.y}`);
        const UI_Closed = this.add.image(720, 400, 'UI_Closed').setScale(0.62);
            console.log(`UI_Closed: x=${UI_Closed.x}, y=${UI_Closed.y}`);
        //const Inventory = this.add.image(720, 400, 'Inventory').setScale(0.65); const Journal = this.add.iamge(720, 400, 'Journal').setScale(0.65);
        
  // const placeholder = this.add.image(-,0 'placeholder').setScale(0.6);
-       const JournalIcon = this.add.image(1180, 540, 'JournalIcon').setScale(0.6).setInteractive({
+       const JournalIcon = this.add.image(1140, 500, 'JournalIcon').setScale(0.6).setInteractive({
            hitArea: new Phaser.Geom.Rectangle(0, 0, 134, 116),
      hitAreaCallback: Phaser.Geom.Rectangle.Contains,
      useHandCursor: true
