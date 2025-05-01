@@ -54,19 +54,33 @@ export default class Cabin extends Phaser.Scene {
        console.log(`Note: x=${Note.x}, y=${Note.y}`);
        
            Note.on('pointerdown', (pointer) => {
-    console.log('Journal button clicked at: ', pointer.x, pointer.y); 
-               note.visible = false;
-               note.disableInteractive();
-       });
+    console.log('Note button clicked at: ', pointer.x, pointer.y); 
+               Note.visible = false;
+               Note.disableInteractive();
+               
+               // showDialogue(message) 
+    //const dialogueBg = this.add.rectangle(720, 400, 600, 200, 0x000000, 0.7)
+    //const dialogueText = this.add.text(720, 400, 'Note info', { 
+        //font: '32px Arial', 
+        //fill: '#ffffff', 
+       // align: 'center' 
+    //}).setOrigin(0.5);
+               //this.input.once('pointerdown', () => {
+        //dialougeBg.destroy();
+        //dialogueText.destroy();
+    //});
+});
+
+   
        
        const UI_Closed = this.add.image(720, 400, 'UI_Closed').setScale(0.62);
            console.log(`UI_Closed: x=${UI_Closed.x}, y=${UI_Closed.y}`);
        //const Inventory = this.add.image(720, 400, 'Inventory').setScale(0.65); const Journal = this.add.iamge(720, 400, 'Journal').setScale(0.65);
-       const NormalEel = this.add.image(420, 700, 'NormalEel').setScale(0.8);
+       const NormalEel = this.add.image(480, 600, 'NormalEel');
            console.log(`NormalEel: x=${NormalEel.x}, y=${NormalEel.y}`);
        //if status = Hungry change.texture('HungryEel') and so on...
  // const placeholder = this.add.image(-,0 'placeholder').setScale(0.6);
-       const JournalIcon = this.add.image(1131.5, 520, 'JournalIcon').setScale(0.61).setInteractive({
+       const JournalIcon = this.add.image(1130.8, 520, 'JournalIcon').setScale(0.61).setInteractive({
            hitArea: new Phaser.Geom.Rectangle(0, 0, 134, 116),
      hitAreaCallback: Phaser.Geom.Rectangle.Contains,
      useHandCursor: true
@@ -77,7 +91,7 @@ export default class Cabin extends Phaser.Scene {
     console.log('Journal button clicked at: ', pointer.x, pointer.y); 
        });
 
-       const InventoryIcon = this.add.image(1020.5, 520, 'InventoryIcon').setScale(0.61).setInteractive({
+       const InventoryIcon = this.add.image(1022, 520, 'InventoryIcon').setScale(0.61).setInteractive({
            hitArea: new Phaser.Geom.Rectangle(0, 0, 134, 116),
      hitAreaCallback: Phaser.Geom.Rectangle.Contains,
      useHandCursor: true
