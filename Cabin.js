@@ -29,7 +29,7 @@ export default class Cabin extends Phaser.Scene {
        //const Inventory = this.add.image(720, 400, 'Inventory').setScale(0.65); const Journal = this.add.iamge(720, 400, 'Journal').setScale(0.65);
        
  // const placeholder = this.add.image(-,0 'placeholder').setScale(0.6);
-       const JournalIcon = this.add.image(1130.5, 520, 'JournalIcon').setScale(0.61).setInteractive({
+       const JournalIcon = this.add.image(1131.5, 520, 'JournalIcon').setScale(0.61).setInteractive({
            hitArea: new Phaser.Geom.Rectangle(0, 0, 134, 116),
      hitAreaCallback: Phaser.Geom.Rectangle.Contains,
      useHandCursor: true
@@ -40,7 +40,7 @@ export default class Cabin extends Phaser.Scene {
     console.log('Journal button clicked at: ', pointer.x, pointer.y); 
        });
 
-       const InventoryIcon = this.add.image(1005.5, 520, 'InventoryIcon').setScale(0.61).setInteractive({
+       const InventoryIcon = this.add.image(1020.5, 520, 'InventoryIcon').setScale(0.61).setInteractive({
            hitArea: new Phaser.Geom.Rectangle(0, 0, 134, 116),
      hitAreaCallback: Phaser.Geom.Rectangle.Contains,
      useHandCursor: true
