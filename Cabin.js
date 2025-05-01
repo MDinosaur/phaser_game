@@ -40,14 +40,14 @@ export default class Cabin extends Phaser.Scene {
     console.log('Journal button clicked at: ', pointer.x, pointer.y); 
        });
 
-       const InventoryIcon = this.add.image(1005.5, 521, 'InventorylIcon').setScale(0.62).setInteractive({
+       const InventoryIcon = this.add.image(1005.5, 521, 'InventoryIcon').setScale(0.62).setInteractive({
            hitArea: new Phaser.Geom.Rectangle(0, 0, 134, 116),
      hitAreaCallback: Phaser.Geom.Rectangle.Contains,
      useHandCursor: true
         });
-       console.log(`InventorylIcon: x=${InventorylIcon.x}, y=${InventorylIcon.y}`);
+       console.log(`InventorylIcon: x=${InventoryIcon.x}, y=${InventoryIcon.y}`);
 
-       InventorylIcon.on('pointerdown', (pointer) => {
+       InventoryIcon.on('pointerdown', (pointer) => {
     console.log('Inventory button clicked at: ', pointer.x, pointer.y); 
        });
     }
