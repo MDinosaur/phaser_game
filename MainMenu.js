@@ -49,7 +49,7 @@ playButton.on('pointerdown', (pointer) => {
         //this.cameras.main.once('camerafadeoutcomplete', () => {
     this.scene.start('Cabin'); 
             
-    });
+    //});
 });
 
         const optionButton = this.add.image(720, 580, 'Option').setScale(0.6).setInteractive({
