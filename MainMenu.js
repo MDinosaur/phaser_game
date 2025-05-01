@@ -9,6 +9,7 @@ export default class MainMenu extends Phaser.Scene {
         this.load.image('DinoFishing', 'Dino Fishing Title screen/DinoFishingTitle.png');
         this.load.image('Play', 'Dino Fishing Title screen/Play button.png');
         this.load.image('Option', 'Dino Fishing Title screen/Option button.png');
+         
     }
 
     create() {
@@ -88,6 +89,8 @@ showNotification(message) {
     }
 
 }
+
+
 
 
 
